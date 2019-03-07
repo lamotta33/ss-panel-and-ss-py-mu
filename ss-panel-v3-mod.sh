@@ -198,7 +198,7 @@ install_node(){
 	echo
 	echo "#############################################################"
 	echo "# One click Install Shadowsocks-Python-Manyuser             #"
-	echo "# Github: https://github.com/mmmwhy/ss-panel-and-ss-py-mu   #"
+	echo "# Github: https://github.com/lamotta33/ss-panel-and-ss-py-mu   #"
 	echo "# Author: 91vps                                             #"
 	echo "#############################################################"
 	echo
@@ -249,7 +249,7 @@ install_node(){
 	# 启用supervisord
 	supervisorctl shutdown
 	#某些机器没有echo_supervisord_conf 
-	wget -N -P  /etc/ --no-check-certificate  https://raw.githubusercontent.com/mmmwhy/ss-panel-and-ss-py-mu/master/supervisord.conf
+	wget -N -P  /etc/ --no-check-certificate  https://raw.githubusercontent.com/lamotta33/ss-panel-and-ss-py-mu/master/supervisord.conf
 	supervisord
 	#iptables
 	iptables -F
@@ -263,7 +263,7 @@ install_node(){
 	chmod +x /etc/rc.d/rc.local
 	echo "#############################################################"
 	echo "# 安装完成，节点即将重启使配置生效                          #"
-	echo "# Github: https://github.com/mmmwhy/ss-panel-and-ss-py-mu   #"
+	echo "# Github: https://github.com/lamotta33/ss-panel-and-ss-py-mu   #"
 	echo "# Author: 91vps                                             #"
 	echo "#############################################################"
 	reboot now
@@ -273,7 +273,7 @@ install_node_db(){
 	echo
 	echo "#############################################################"
 	echo "# One click Install Shadowsocks-Python-Manyuser             #"
-	echo "# Github: https://github.com/mmmwhy/ss-panel-and-ss-py-mu   #"
+	echo "# Github: https://github.com/lamotta33/ss-panel-and-ss-py-mu   #"
 	echo "# Author: 91vps                                             #"
 	echo "#############################################################"
 	echo
@@ -331,7 +331,7 @@ install_node_db(){
 	# 启用supervisord
 	supervisorctl shutdown
 	#某些机器没有echo_supervisord_conf 
-	wget -N -P  /etc/ --no-check-certificate  https://raw.githubusercontent.com/mmmwhy/ss-panel-and-ss-py-mu/master/supervisord.conf
+	wget -N -P  /etc/ --no-check-certificate  https://raw.githubusercontent.com/lamotta33/ss-panel-and-ss-py-mu/master/supervisord.conf
 	supervisord
 	#iptables
 	iptables -F
@@ -345,7 +345,7 @@ install_node_db(){
 	chmod +x /etc/rc.d/rc.local
 	echo "#############################################################"
 	echo "# 安装完成，节点即将重启使配置生效                          #"
-	echo "# Github: https://github.com/mmmwhy/ss-panel-and-ss-py-mu   #"
+	echo "# Github: https://github.com/lamotta33/ss-panel-and-ss-py-mu   #"
 	echo "# Author: 91vps                                             #"
 	echo "#############################################################"
 	reboot now
@@ -355,7 +355,7 @@ install_panel_and_node(){
 	# 取消文件数量限制
 	sed -i '$a * hard nofile 512000\n* soft nofile 512000' /etc/security/limits.conf
 	install_centos_ssr
-	wget -N -P  /root/shadowsocks/ --no-check-certificate  https://raw.githubusercontent.com/mmmwhy/ss-panel-and-ss-py-mu/master/userapiconfig.py
+	wget -N -P  /root/shadowsocks/ --no-check-certificate  https://raw.githubusercontent.com/lamotta33/ss-panel-and-ss-py-mu/master/userapiconfig.py
 	# 启用supervisord
 	echo_supervisord_conf > /etc/supervisord.conf
   sed -i '$a [program:ssr]\ncommand = python /root/shadowsocks/server.py\nuser = root\nautostart = true\nautorestart = true' /etc/supervisord.conf
@@ -378,14 +378,14 @@ install_panel_and_node(){
 	echo "# 用户名: 91vps 密码: 91vps                                  #"
 	echo "# phpmyadmin：http://${IPAddress}:888  用户名密码均为：root  #"
 	echo "# 安装完成，节点即将重启使配置生效                           #"
-	echo "# Github: https://github.com/mmmwhy/ss-panel-and-ss-py-mu    #"
+	echo "# Github: https://github.com/lamotta33/ss-panel-and-ss-py-mu    #"
 	echo "#############################################################"
 	reboot now
 }
 echo
 echo "#############################################################"
 echo "# One click Install SS-panel and Shadowsocks-Py-Mu          #"
-echo "# Github: https://github.com/mmmwhy/ss-panel-and-ss-py-mu   #"
+echo "# Github: https://github.com/lamotta33/ss-panel-and-ss-py-mu   #"
 echo "# Author: 91vps                                             #"
 echo "# Please choose the server you want                         #"
 echo "# 1  SS-V3_mod_panel and node One click Install             #"
